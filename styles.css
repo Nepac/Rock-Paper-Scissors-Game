@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #454545;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px; /* Reduced max-width for smaller container */
+}
+
+.game-container {
+    text-align: center;
+    background-color: rgb(195, 194, 194);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.choices img {
+    margin: 10px;
+    width: 25%; /* Reduced width percentage */
+    max-width: 150px; /* Reduced max-width */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.choices img:hover {
+    transform: scale(1.1);
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4vw; /* Further reduced font size */
+    color: rgb(103, 103, 253);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.animated-title {
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.computer-img {
+    display: block;
+    margin: 20px auto;
+    max-width: 150px; /* Reduced max-width */
+    width: 50%;
+}
+
+@media (max-width: 600px) {
+    .permanent-marker-regular {
+        font-size: 6vw; /* Adjusted font size for smaller screens */
+    }
+
+    .choices img {
+        width: 70%; /* Adjusted width percentage for smaller screens */
+        max-width: 120px; /* Reduced max-width */
+    }
+
+    .computer-img {
+        width: 70%; /* Adjusted width percentage for smaller screens */
+        max-width: 120px; /* Reduced max-width */
+    }
+}
